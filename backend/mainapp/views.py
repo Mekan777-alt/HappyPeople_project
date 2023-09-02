@@ -1,11 +1,12 @@
 from django.shortcuts import render
-from .models import Menu, MenuCategory
+from .models import Products, MenuCategory
 
 
 def index(requests):
     context = {
         'title': 'Happy People | Main',
-        'menu': Menu.objects.all(),
-        'menu_category': MenuCategory.objects.all()
+        'products': Products.objects.all(),
+        'menu_category': MenuCategory.objects.all(),
+
     }
     return render(requests, 'mainapp/index.html', context)

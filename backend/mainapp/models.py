@@ -13,7 +13,7 @@ class MenuCategory(models.Model):
         return self.name
 
 
-class Menu(models.Model):
+class Products(models.Model):
     name_product = models.CharField(max_length=64)
     description_product = models.TextField()
     photo_product = models.ImageField(upload_to='product', null=True, blank=True)

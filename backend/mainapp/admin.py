@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import MenuCategory, Menu
+from .models import MenuCategory, Products
 
 admin.site.register(MenuCategory)
-admin.site.register(Menu)
+admin.site.register(Products)
