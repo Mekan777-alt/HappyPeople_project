@@ -3,783 +3,468 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0">
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-    <title>{{ title }}</title>
-    <!-- CSS -->
-    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
-    <link type="text/css" rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-    <link type="text/css" rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
-    <link type="text/css" href="{% static 'css/animate.css' %}" rel="stylesheet" />
-    <link type="text/css" href="{% static 'css/magnific-popup.css' %}" rel="stylesheet" />
-    <link type="text/css" href="{% static 'css/bootstrap-datetimepicker.css' %}" rel="stylesheet" />
-    <link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet" />
-    <link type="text/css" href="{% static 'css/media.css' %}" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <title>Happy People | Cafe and Restoaurant</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Restaurantly - v3.9.1
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
-<body id="mainBox" class="creamBg" data-spy="scroll" data-target="#bs-example-navbar-collapse-1" data-offset="150">
-    <div id="site-head">
-        <!-- Header Section Begins -->
-        <header id="header" class="header-block" data-top="0" data-scroll="100">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-menu">
-                        <div class="menuBar scrollbtn">
-                            <nav class="navbar navbar-default">
-                                <div class="container-fluid">
-                                    <div class="navbar-header">
-                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                            <span class="sr-only">Toggle navigation</span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                        </button>
-{#                                        <div class="logo">#}
-{#                                            <a class="navbar-brand" href="index.html"><img src="{% static 'images/logo-fotor-bg-remover-20230812181914.png' %}" alt="logo" /></a>#}
-{#                                        </div>#}
-                                    </div>
-                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                        <ul class="nav navbar-nav navbar-right">
-                                            <li class="active"><a href="#banner">Главная</a></li>
-                                            <li><a href="#about">О нас</a></li>
-                                            <li><a href="#our-menu">Меню</a></li>
-                                            <li><a href="#reservation">Забронировать</a></li>
-                                            <li><a href="#footer">Контакты</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- Header Section Ends -->
+<body>
 
-        <!-- Banner Section Begins -->
-        <section id="banner" class="banner full-screen-mode parallax-fix parallaximg">
-            <div class="container pr">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="banner-text wow animated fadeInUp" data-wow-delay="1s">
-                            <div class="banner-cell">
-                                <h1> HAPPY PEOPLE </h1>
-                                <h2> <span class="side-img left-side-img"><i></i><i></i><i></i></span> consectetuer adipiscing <span class="side-img right-side-img"><i></i><i></i><i></i></span> </h2>
-                                <p> Загляните в наш ресторан и насладитесь непередаваемым вкусом превосходных блюд в уютной атмосфере.</p>
-                                <h3> Забронируйте столик прямо сейчас и получите доступ к нашей невероятной акции, которая порадует вас своей щедростью! </h3>
-                                <div class="banner-buttons scrollbtn">
-                                    <a href="#reservation" class="orange-btn">ЗАБРОНИРОВАТЬ</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Banner Section Ends -->
-    </div>
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
 
-    <div class="main">
-
-        <!-- About Section Begins -->
-        <section id="about" class="about-block pad-top-100 pad-bottom-100">
-            <div class="container pr">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow animated fadeInLeft" data-wow-delay="0.5s">
-                        <div class="about-img">
-                            <img src="{% static 'images/about-img.png' %}" alt="images" />
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <h2 class="block-title"> О нас <span class="side-img right-side-img"><i></i><i></i><i></i></span></h2>
-                        <h3> НАЧИНАЛОСЬ ВСЕ, В ОБЩЕМ-ТО, ПРОСТО... </h3>
-                        <p> Happy People - это место, где сходятся вкус, атмосфера и обслуживание, чтобы создать незабываемый опыт. Наш ресторан - идеальное место, чтобы насладиться удивительными блюдами, которые приготовлены из свежих продуктов и с любовью. </p>
-                        <p> Вход в наш ресторан вас сразу погрузит в уютную и теплую обстановку, которая идеально подходит для ужина с семьей, романтического свидания или встречи с друзьями. Наш интерьер насыщен элементами современного дизайна, что делает его очень привлекательным.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About Section Ends -->
-
-        <!-- Today's Special Menu Section Begins -->
-        <section id="special-menu" class="special-menu-block color-white parallax-fix parallaximg-2 pad-top-100">
-            <div class="container pr">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <h2 class="block-title color-white text-align-center"> <span class="side-img left-side-img"><i></i><i></i><i></i></span> Особое предложение <span class="side-img right-side-img"><i></i><i></i><i></i></span> </h2>
-                        <h5 class="title-caption text-align-center"> </h5>
-                        <div id="owl-special-menu" class="spcl-menu">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="item wow animated fadeInUp" data-wow-delay="0.5s">
-                                    <figure>
-                                        <img src="{% static 'images/special-menu-1.jpg' %}" alt="image" />
-                                    </figure>
-                                    <div class="spcl-text">
-                                        <h4> <a href="#"> Salmon Steak </a> </h4>
-                                        <p> Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia. </p>
-                                        <div class="spcl-menu-btm">
-                                            <ul class="stars">
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                            </ul>
-                                            <h4> $17.8 </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="item wow animated fadeInUp" data-wow-delay="0.8s">
-                                    <figure>
-                                        <img src="{% static 'images/special-menu-2.jpg' %}" alt="image" />
-                                    </figure>
-                                    <div class="spcl-text">
-                                        <h4> <a href="#"> italian pizza </a> </h4>
-                                        <p> Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia. </p>
-                                        <div class="spcl-menu-btm">
-                                            <ul class="stars">
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                            </ul>
-                                            <h4> $17.8 </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="item wow animated fadeInUp" data-wow-delay="1s">
-                                    <figure>
-                                        <img src="{% static 'images/special-menu-3.jpg' %}" alt="image" />
-                                    </figure>
-                                    <div class="spcl-text">
-                                        <h4> <a href="#"> Veg. roll </a> </h4>
-                                        <p> Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia. </p>
-                                        <div class="spcl-menu-btm">
-                                            <ul class="stars">
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> <i class="fa fa-star"></i> </a>
-                                                </li>
-                                            </ul>
-                                            <h4> $17.8 </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Today's Special Menu Section Ends -->
-
-        <!-- Our Menu Section Begins -->
-        <section id="our-menu" class="our-menu-block pad-top-100 pad-bottom-100 mar-top-320 pr">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <h2 class="block-title text-align-center"> <span class="side-img left-side-img"><i></i><i></i><i></i></span> Наши предложения для гурманов <span class="side-img right-side-img"><i></i><i></i><i></i></span> </h2>
-                        <h5 class="title-caption text-align-center"> </h5>
-                        <div class="our-menu-list">
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pad-left">
-                                <div class="menu-list">
-                                    <h3> STARTERS </h3>
-                                    <h5> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do aliqua. Ut enim ad minim venia,nostrud exercitation ullamco. </h5>
-                                    <ul>
-                                        <li>
-                                            <figure>
-                                                <img src="{% static 'images/menu-list-1.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="menu-info">
-                                                <h5> Mexican Pizza </h5>
-                                                <h5 class="menu-price">$25</h5>
-                                                <h6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed aliqua. Ut enim ad minim venia,nostrud.</h6>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <figure>
-                                                <img src="{% static 'images/menu-list-2.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="menu-info">
-                                                <h5> Grilled Meat </h5>
-                                                <h5 class="menu-price">$20</h5>
-                                                <h6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed aliqua. Ut enim ad minim venia,nostrud.</h6>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <figure>
-                                                <img src="{% static 'images/menu-list-3.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="menu-info">
-                                                <h5> Fried Shrimp </h5>
-                                                <h5 class="menu-price">$18.8</h5>
-                                                <h6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed aliqua. Ut enim ad minim venia,nostrud.</h6>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <figure>
-                                                <img src="{% static 'images/menu-list-4.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="menu-info">
-                                                <h5> Cupcakes </h5>
-                                                <h5 class="menu-price">$10</h5>
-                                                <h6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed aliqua. Ut enim ad minim venia,nostrud.</h6>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pad-right">
-                                <div class="menu-list">
-                                    <h3> MAIN COURSE </h3>
-                                    <h5> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do aliqua. Ut enim ad minim venia,nostrud exercitation ullamco. </h5>
-                                    <ul>
-                                        <li>
-                                            <figure>
-                                                <img src="{% static 'images/menu-list-1.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="menu-info">
-                                                <h5> Mexican Pizza </h5>
-                                                <h5 class="menu-price">$25</h5>
-                                                <h6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed aliqua. Ut enim ad minim venia,nostrud.</h6>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <figure>
-                                                <img src="{% static 'images/menu-list-2.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="menu-info">
-                                                <h5> Grilled Meat </h5>
-                                                <h5 class="menu-price">$20</h5>
-                                                <h6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed aliqua. Ut enim ad minim venia,nostrud.</h6>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <figure>
-                                                <img src="{% static 'images/menu-list-3.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="menu-info">
-                                                <h5> Fried Shrimp </h5>
-                                                <h5 class="menu-price">$18.8</h5>
-                                                <h6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed aliqua. Ut enim ad minim venia,nostrud.</h6>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <figure>
-                                                <img src="{% static 'images/menu-list-4.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="menu-info">
-                                                <h5> Cupcakes </h5>
-                                                <h5 class="menu-price">$10</h5>
-                                                <h6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed aliqua. Ut enim ad minim venia,nostrud.</h6>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pad-left">
-                                <div class="menu-list">
-                                    <h3> Deserts </h3>
-                                    <h5> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do aliqua. Ut enim ad minim venia,nostrud exercitation ullamco. </h5>
-                                    <ul>
-                                        <li>
-                                            <figure>
-                                                <img src="{% static 'images/menu-list-1.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="menu-info">
-                                                <h5> Mexican Pizza </h5>
-                                                <h5 class="menu-price">$25</h5>
-                                                <h6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed aliqua. Ut enim ad minim venia,nostrud.</h6>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <figure>
-                                                <img src="{% static 'images/menu-list-2.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="menu-info">
-                                                <h5> Grilled Meat </h5>
-                                                <h5 class="menu-price">$20</h5>
-                                                <h6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed aliqua. Ut enim ad minim venia,nostrud.</h6>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pad-right">
-                                <div class="menu-list">
-                                    <h3> Drinks </h3>
-                                    <h5> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do aliqua. Ut enim ad minim venia,nostrud exercitation ullamco. </h5>
-                                    <ul>
-                                        <li>
-                                            <figure>
-                                                <img src="{% static 'images/menu-list-1.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="menu-info">
-                                                <h5> Mexican Pizza </h5>
-                                                <h5 class="menu-price">$25</h5>
-                                                <h6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed aliqua. Ut enim ad minim venia,nostrud.</h6>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <figure>
-                                                <img src="{% static 'images/menu-list-2.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="menu-info">
-                                                <h5> Grilled Meat </h5>
-                                                <h5 class="menu-price">$20</h5>
-                                                <h6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed aliqua. Ut enim ad minim venia,nostrud.</h6>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Our Menu Section Ends -->
-
-
-        <!-- Everyday's Menu Section Begins -->
-        <section id="daily-menu" class="daily-menu-block pad-top-100">
-            <div class="container pr">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <h2 class="block-title text-align-center"> <span class="side-img left-side-img"><i></i><i></i><i></i></span> Повседневное меню <span class="side-img right-side-img"><i></i><i></i><i></i></span> </h2>
-                        <h5 class="title-caption text-align-center">  </h5>
-                        <div class="tab-menu wow animated fadeInUp" data-wow-delay="0.5s" data-example-id="togglable-tabs">
-                            <ul class="nav nav-tabs" id="myTabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#breakfast" id="breakfast-tab" role="tab" data-toggle="tab" aria-controls="breakfast" aria-expanded="true">Завтраки</a></li>
-                                <li role="presentation"><a href="#lunch" role="tab" id="lunch-tab" data-toggle="tab" aria-controls="lunch">ланчи</a></li>
-                            </ul>
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade in active" role="tabpanel" id="breakfast" aria-labelledby="breakfast-tab">
-                                    <div id="owl-breakfast" class="owl-carousel spcl-menu pad-bottom-70">
-                                        <div class="item">
-                                            <figure>
-                                                <img src="{% static 'images/special-menu-1.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="spcl-text">
-                                                <h4> <a href="#"> Salmon Steak </a> </h4>
-                                                <p> Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia. </p>
-                                                <div class="spcl-menu-btm">
-                                                    <ul class="stars">
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                    </ul>
-                                                    <h4> $17.8 </h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <figure>
-                                                <img src="{% static 'images/special-menu-2.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="spcl-text">
-                                                <h4> <a href="#"> italian pizza </a> </h4>
-                                                <p> Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia. </p>
-                                                <div class="spcl-menu-btm">
-                                                    <ul class="stars">
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                    </ul>
-                                                    <h4> $17.8 </h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <figure>
-                                                <img src="{% static 'images/special-menu-3.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="spcl-text">
-                                                <h4> <a href="#"> Veg. roll </a> </h4>
-                                                <p> Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia. </p>
-                                                <div class="spcl-menu-btm">
-                                                    <ul class="stars">
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                    </ul>
-                                                    <h4> $17.8 </h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" role="tabpanel" id="lunch" aria-labelledby="lunch-tab">
-                                    <div id="owl-lunch" class="owl-carousel spcl-menu pad-bottom-70">
-                                        <div class="item">
-                                            <figure>
-                                                <img src="{% static 'images/special-menu-2.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="spcl-text">
-                                                <h4> <a href="#"> italian pizza </a> </h4>
-                                                <p> Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia. </p>
-                                                <div class="spcl-menu-btm">
-                                                    <ul class="stars">
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                    </ul>
-                                                    <h4> $25.9 </h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <figure>
-                                                <img src="{% static 'images/special-menu-1.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="spcl-text">
-                                                <h4> <a href="#"> Salmon Steak </a> </h4>
-                                                <p> Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia. </p>
-                                                <div class="spcl-menu-btm">
-                                                    <ul class="stars">
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star-half"></i> </a>
-                                                        </li>
-                                                    </ul>
-                                                    <h4> $17.8 </h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <figure>
-                                                <img src="{% static 'images/special-menu-3.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="spcl-text">
-                                                <h4> <a href="#"> Veg. roll </a> </h4>
-                                                <p> Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia. </p>
-                                                <div class="spcl-menu-btm">
-                                                    <ul class="stars">
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star-half"></i> </a>
-                                                        </li>
-                                                    </ul>
-                                                    <h4> $20.2 </h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" role="tabpanel" id="dinner" aria-labelledby="dinner-tab">
-                                    <div id="owl-dinner" class="owl-carousel spcl-menu pad-bottom-70">
-                                        <div class="item">
-                                            <figure>
-                                                <img src="{% static 'images/special-menu-3.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="spcl-text">
-                                                <h4> <a href="#"> Veg. roll </a> </h4>
-                                                <p> Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia. </p>
-                                                <div class="spcl-menu-btm">
-                                                    <ul class="stars">
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star-half"></i> </a>
-                                                        </li>
-                                                    </ul>
-                                                    <h4> $20.2 </h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <figure>
-                                                <img src="{% static 'images/special-menu-1.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="spcl-text">
-                                                <h4> <a href="#"> Salmon Steak </a> </h4>
-                                                <p> Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia. </p>
-                                                <div class="spcl-menu-btm">
-                                                    <ul class="stars">
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star-half"></i> </a>
-                                                        </li>
-                                                    </ul>
-                                                    <h4> $17.8 </h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <figure>
-                                                <img src="{% static 'images/special-menu-2.jpg' %}" alt="image" />
-                                            </figure>
-                                            <div class="spcl-text">
-                                                <h4> <a href="#"> italian pizza </a> </h4>
-                                                <p> Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia. </p>
-                                                <div class="spcl-menu-btm">
-                                                    <ul class="stars">
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> <i class="fa fa-star"></i> </a>
-                                                        </li>
-                                                    </ul>
-                                                    <h4> $25.9 </h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Everyday's Menu Menu Section Ends -->
-
-
-        <!-- Reservation Section Begins -->
-        <section id="reservation" class="reservation-block pad-top-100 pad-bottom-100">
-            <div class="container pr">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <h2 class="block-title text-align-center"> <span class="side-img left-side-img"><i></i><i></i><i></i></span> Заказ столика <span class="side-img right-side-img"><i></i><i></i><i></i></span> </h2>
-                        <h5 class="title-caption text-align-center mar-bottom-25"></h5>
-                        <form class="reservation-block">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" placeholder="Имя">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" placeholder="E-Mail">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" placeholder="Контактный номер">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="form-box">
-                                    <select>
-                                        <option selected disabled>Количество человек</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" id='date-picker' placeholder="Дата" />
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" id='time-picker' placeholder="Время" />
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 reserve-book-btn text-align-center">
-                                <a href="#" class="orange-btn">ЗАБРОНИРОВАТЬ СТОЛИК</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Reservation Section Ends -->
-
-        <!-- Footer Section Begins -->
-        <section id="footer" class="footer-block color-white parallax-fix parallaximg-7 pad-top-100">
-            <div class="container pr">
-                <div class="row">
-                    <div class=" footer-section">
-                        <div class="footer-content">
-                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                <div class="contact-us">
-                                    <h3 class="footer-title">Контакты</h3>
-                                    <ul>
-                                        <li> <i class="fa fa-map-marker"></i> <span> 121 King St, Melbourne VIC 3000, Australia </span> </li>
-                                        <li> <i class="fa fa-phone"></i> <span> +91 98 76 543210 </span> </li>
-                                        <li> <i class="fa fa-envelope-o"></i> <a href="#"> support@food.com </a> </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                <div class="new-on-menu">
-                                    <h3 class="footer-title"></h3>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                <div class="opening-hours">
-                                    <h3 class="footer-title">Режим работы</h3>
-                                    <h6><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> <span>Воскресенье - Четверг <br/> 10:00 - 00:00 </span> </h6>
-                                    <h6><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> <span>Пятница - Суббота <br/> 10:00 - 02:00 </span> </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section id="copyright" class="copyright-block color-white text-align-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-        <!-- Footer Section Ends -->
-
-        <!-- Back to top Section Begins -->
-        <a href="javascript:void(0);" class="back-to-top"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a>
-        <!-- Back to top Section Ends -->
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-phone d-flex align-items-center"><span>+7(987) 225‒06‒06</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span> ВС-ЧТ: 10:00 - 00:00</span></i>
+          <i class="bi bi-clock d-flex align-items-center ms-4"><span> ПТ-СБ: 10:00 - 02:00</span></i>
+      </div>
 
     </div>
+  </div>
 
-    <!-- Jquery Js -->
-    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/element.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/modernizr.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/owl.carousel.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.localscroll-1.2.7-min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.isotope.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.magnific-popup.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/moment-with-locales.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/bootstrap-datetimepicker.js' %}"></script>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="{% url 'main_app:index' %}">Happy People</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Главная</a></li>
+          <li><a class="nav-link scrollto" href="#about">О нас</a></li>
+          <li><a class="nav-link scrollto" href="#menu">Меню</a></li>
+          <li><a class="nav-link scrollto" href="#specials">Спецпредложения</a></li>
+          <li><a class="nav-link scrollto" href="#events">Мероприятие</a></li>
+          <li><a class="nav-link scrollto" href="#gallery">Галерея</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Забронировать</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="">
+          <h1>Добро пожаловать в <span>Happy people</span></h1>
+          <h2>"Отведайте вкус и насладитесь атмосферой - наш ресторан, где гастрономия становится искусством!"</h2>
+
+          <div class="btns">
+            <a href="#menu" class="btn-menu animated fadeInUp scrollto">Меню</a>
+            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Забронировать</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="{% static 'assets/img/IMG_1745.JPG' %}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Happy people - это источник наслаждения и удовольствия. </h3>
+            <p>
+              Мы предлагаем неповторимое сочетание вкусов и атмосферы, чтобы каждое посещение стало особенным событием.
+                Наша команда талантливых поваров готовит блюда с использованием только самых свежих и качественных
+                ингредиентов. Мы стремимся создать уютное и гостеприимное место, где вы можете насладиться
+                непринужденной обстановкой и отличным обслуживанием. Приходите и окунитесь в мир изысканной кухни и
+                гастрономических наслаждений в нашем ресторане.
+                Мы гордимся тем, что каждый гость оставляет нас с яркими впечатлениями и желанием вернуться снова и
+                снова. Добро пожаловать в Happy People, где каждый глоток и каждый кусочек становятся настоящими
+                гастрономическими открытиями!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Почему мы</h2>
+          <p>Почему стоит выбрать наш ресторан</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>01</span>
+              <h4>Великолепная кухня</h4>
+              <p>Мы готовим блюда с использованием только самых свежих и качественных ингредиентов. Наша команда талантливых поваров создает уникальные и изысканные вкусовые комбинации, чтобы каждый кусочек стал настоящим гастрономическим открытием.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <span>02</span>
+              <h4>Отличное обслуживание</h4>
+              <p>Мы гордимся нашей дружелюбной и профессиональной командой, которая всегда готова пойти на встречу потребностям и пожеланиям наших гостей. Мы стремимся обеспечить высокий уровень сервиса, чтобы каждый посетитель чувствовал себя особенным и важным.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+              <span>03</span>
+              <h4>Уютная атмосфера</h4>
+              <p>Наш ресторан предлагает уютную и гостеприимную обстановку, где вы можете расслабиться и насладиться приятной компанией. Мы создали стильный и комфортный интерьер, чтобы каждый посетитель чувствовал себя как дома и мог наслаждаться уникальной атмосферой нашего заведения.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Menu Section ======= -->
+    <section id="menu" class="menu section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Меню</h2>
+          <p>Оцените наше вкусное меню</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+                {% for m in menu_category %}
+                  <li data-filter="*" class="filter-active">{{ m.name }}</li>
+                {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+            {% for p in products %}
+                <div class="col-lg-6 menu-item">
+                    <img src="{{ p.photo_product.url }}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a>{{ p.name_product }}</a><span>{{ p.price }}</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        {{ p.description_product }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End Menu Section -->
+
+    <!-- ======= Specials Section ======= -->
+    <section id="specials" class="specials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>СПЕЦПРЕДЛОЖЕНИЯ</h2>
+          <p>Ознакомьтесь с нашими специальными предложениями</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+                {% for sale in sales %}
+                    <li class="nav-item">
+                        <a class="nav-link active show" data-bs-toggle="tab" href="#">{{ sale.product_name }}</a>
+                    </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="#">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <p>{{ sale.description }}</p>
+                      <p class="fst-italic">{{ sale.price }} руб</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ sale.photo.url }}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+                {% endfor %}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Specials Section -->
+
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Мероприятие</h2>
+          <p>Предлагаем организацию и проведение мероприятий в нашем ресторане</p>
+        </div>
+
+        <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/IMG_5309.JPG' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Дни рождения</h3>
+                  <p class="fst-italic">
+                    Мы рады предложить вам ресторан в качестве места для празднования дня рождения! Ваш особый день заслуживает незабываемых впечатлений, и мы готовы создать для вас уникальную атмосферу и незабываемые вкусовые впечатления.
+                    Наш ресторан предлагает разнообразные меню, которые можно настроить под ваши предпочтения и потребности. Наши шеф-повары готовы приготовить изысканные блюда, отвечающие самым высоким стандартам качества.
+                    Мы также предлагаем различные опции оформления и украшения стола, чтобы создать праздничную атмосферу и сделать ваш день рождения по-настоящему особенным. Наш персонал обеспечит вам отличное обслуживание и будет готов помочь вам во всех вопросах, связанных с организацией мероприятия.
+                    Не стесняйтесь обращаться к нам с любыми пожеланиями и запросами. Мы всегда готовы сделать ваше празднование дня рождения в ресторане незабываемым и запоминающимся событием.
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/IMG_0690.JPG' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Частные мероприятия</h3>
+                  <p class="fst-italic">
+                    Мы рады пригласить вас в наш ресторан для проведения частных мероприятий! Независимо от того, чему вы хотите уделить внимание - юбилей, свадьба, корпоративное мероприятие или любое другое особое событие - мы готовы предложить вам идеальное место и высококлассное обслуживание.
+                    В нашем ресторане вы найдете уютные залы, которые могут быть адаптированы под любую тему или концепцию вашего мероприятия. Наше меню предлагает разнообразие блюд, приготовленных из свежих и качественных ингредиентов. Мы также готовы предложить вам специальные варианты меню, разработанные с учетом ваших пожеланий.
+                    Команда наших профессиональных организаторов событий готова помочь вам с каждым аспектом организации мероприятия - от декораций и размещения гостей до развлекательных программ и специальных запросов. Мы постараемся сделать ваше мероприятие незабываемым и запоминающимся для всех гостей.
+                    Не стесняйтесь обращаться к нам с любыми вопросами или запросами. Мы готовы сделать все возможное, чтобы ваше частное мероприятие в нашем ресторане стало особенным и превзошло ваши ожидания.
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Events Section -->
+
+    <!-- ======= Book A Table Section ======= -->
+    <section id="book-a-table" class="book-a-table">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Забронировать</h2>
+          <p>Заказать столик</p>
+        </div>
+
+        <form action="" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">{% csrf_token %}
+          <div class="row">
+            <div class="col-lg-4 col-md-6 form-group">
+              {{ forms.name }}
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                {{ forms.email }}
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                {{ forms.phone_number }}
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+                {{ forms.date }}
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+                {{ forms.time }}
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+                {{ forms.people_number }}
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="loading">Минуту</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Мы свяжемся с вами в ближайшее время для подтверждения бронирования. Спасибо за выбор нашего ресторана!</div>
+          </div>
+          <div class="text-center"><button type="submit">Забронировать</button></div>
+        </form>
+
+      </div>
+    </section><!-- End Book A Table Section -->
+
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Галерея</h2>
+          <p>Фотографии, показывающие уникальность нашего заведения</p>
+        </div>
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/1.JPG' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/1.JPG' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/6.JPG' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/6.JPG' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/4.JPG' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/4.JPG' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/7.JPG' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/7.JPG' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/5.JPG' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/5.JPG' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/2.JPG' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/2.JPG' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/3.JPG' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/3.JPG' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/8.JPG' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/8.JPG' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Happy People</h3>
+              <p>
+                Мусина 1 <br>
+                г. Казань<br><br>
+                <strong>Телефон:</strong> +7(987) 225‒06‒06<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static '' %}assets/js/main.js"></script>
 
 </body>
 
