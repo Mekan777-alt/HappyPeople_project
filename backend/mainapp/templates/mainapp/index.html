@@ -300,36 +300,36 @@
           <p>Заказать столик</p>
         </div>
 
-        <form action="" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">{% csrf_token %}
+        <form action="" method="post" role="form"  data-aos="fade-up" data-aos-delay="100">{% csrf_token %}
           <div class="row">
             <div class="col-lg-4 col-md-6 form-group">
               {{ forms.name }}
-              <div class="validate"></div>
+{#              <div class="validate"></div>#}
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
                 {{ forms.email }}
-              <div class="validate"></div>
+{#              <div class="validate"></div>#}
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
                 {{ forms.phone_number }}
-              <div class="validate"></div>
+{#              <div class="validate"></div>#}
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
                 {{ forms.date }}
-              <div class="validate"></div>
+{#              <div class="validate"></div>#}
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
                 {{ forms.time }}
-              <div class="validate"></div>
+{#              <div class="validate"></div>#}
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
                 {{ forms.people_number }}
-              <div class="validate"></div>
+{#              <div class="validate"></div>#}
             </div>
           </div>
           <div class="mb-3">
             <div class="loading">Минуту</div>
-            <div class="error-message"></div>
+              <div class="error-message"></div>
             <div class="sent-message">Мы свяжемся с вами в ближайшее время для подтверждения бронирования. Спасибо за выбор нашего ресторана!</div>
           </div>
           <div class="text-center"><button type="submit">Забронировать</button></div>

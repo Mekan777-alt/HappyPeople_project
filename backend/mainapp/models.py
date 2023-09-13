@@ -1,8 +1,11 @@
+import datetime
+
+import django.utils.timezone
 from django.db import models
 
 
 class MenuCategory(models.Model):
-    name = models.CharField(max_length=64)
+    name = models.CharField(max_length=64, verbose_name='Категория')
 
     class Meta:
         ordering = ('name',)
@@ -14,11 +17,11 @@ class MenuCategory(models.Model):
 
 
 class Products(models.Model):
-    name_product = models.CharField(max_length=64)
-    description_product = models.TextField()
-    photo_product = models.ImageField(upload_to='product', null=True, blank=True)
-    price = models.DecimalField(max_digits=8, decimal_places=2, default=0)
-    category = models.ForeignKey(MenuCategory, on_delete=models.CASCADE)
+    name_product = models.CharField(max_length=64, verbose_name='Название продукта')
+    description_product = models.TextField(verbose_name='Описание продукта')
+    photo_product = models.ImageField(upload_to='product', null=True, blank=True, verbose_name='Фотография продукта')
+    price = models.DecimalField(max_digits=8, decimal_places=2, default=0, verbose_name='Цена продукта')
+    category = models.ForeignKey(MenuCategory, on_delete=models.CASCADE, verbose_name='Категория')
 
     class Meta:
         verbose_name = 'Продукты'
@@ -29,10 +32,10 @@ class Products(models.Model):
 
 
 class Sales(models.Model):
-    product_name = models.CharField(max_length=64)
-    description = models.TextField()
-    photo = models.ImageField(upload_to='sales_product', null=True, blank=True)
-    price = models.DecimalField(max_digits=8, decimal_places=2, default=0)
+    product_name = models.CharField(max_length=64, verbose_name='Название продукта')
+    description = models.TextField(verbose_name='Описание продукта')
+    photo = models.ImageField(upload_to='sales_product', null=True, blank=True, verbose_name='Фотография продукта')
+    price = models.DecimalField(max_digits=8, decimal_places=2, default=0, verbose_name='Цена продукта')
 
     class Meta:
         verbose_name = 'Особое предложение'
@@ -43,12 +46,13 @@ class Sales(models.Model):
 
 
 class Users(models.Model):
-    name = models.CharField(max_length=64)
-    email = models.CharField(max_length=20)
-    phone_number = models.IntegerField(null=False, blank=False)
-    people_number = models.PositiveIntegerField()
-    date = models.CharField(max_length=15)
-    time = models.CharField(max_length=5)
+    name = models.CharField(max_length=64, verbose_name='Имя')
+    email = models.CharField(max_length=20, verbose_name='Почта')
+    phone_number = models.CharField(max_length=15, verbose_name='Телефон номер')
+    people_number = models.PositiveIntegerField(verbose_name='Количество человек')
+    date = models.CharField(max_length=15, verbose_name='Дата брони')
+    time = models.CharField(max_length=5, verbose_name='Время брони')
+    time_register = models.DateTimeField(default=django.utils.timezone.now, verbose_name='Когда пришла бронь')
 
     class Meta:
         verbose_name = 'Брони'

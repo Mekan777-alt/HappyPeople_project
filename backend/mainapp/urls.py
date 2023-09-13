@@ -4,5 +4,6 @@ from .views import index
 app_name = 'mainapp'
 
 urlpatterns = [
-    path('', index, name='index')
+    path('', index, name='index'),
+    # path('', orders, name='orders')
 ]

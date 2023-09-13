@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Products, MenuCategory, Sales
 from .forms import UsersForm
 
@@ -11,15 +11,10 @@ def index(request):
         'menu_category': MenuCategory.objects.all(),
         'forms': UsersForm()
     }
-    return render(request, 'mainapp/index.html', context)
-
-
-# def orders(request):
-#     if request.method == 'POST':
-#         form = UsersForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return render(request, 'mainapp/index.html')
-#     else:
-#         form = UsersForm
-#         return render(request, 'mainapp/index.html', {'form': form})
+    if request.method == 'POST':
+        form = UsersForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'mainapp/popup.html')
+    else:
+        return render(request, 'mainapp/index.html', context)
