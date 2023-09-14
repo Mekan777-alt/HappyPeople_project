@@ -15,5 +15,6 @@ def index(request):
         form = UsersForm(request.POST)
         if form.is_valid():
             form.save()
+            return HttpResponse("done")
     else:
         return render(request, 'mainapp/index.html', context)
