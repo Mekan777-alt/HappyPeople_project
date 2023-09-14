@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, HttpResponse
 from .models import Products, MenuCategory, Sales
 from .forms import UsersForm
 
@@ -15,6 +15,5 @@ def index(request):
         form = UsersForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'mainapp/popup.html')
     else:
         return render(request, 'mainapp/index.html', context)
