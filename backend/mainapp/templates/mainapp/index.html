@@ -10,10 +10,6 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-
 
   <!-- Vendor CSS Files -->
     <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
@@ -29,12 +25,7 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Restaurantly - v3.9.1
-  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body>
@@ -176,8 +167,9 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="menu-flters">
+                <li data-filter="*" class="filter-active">Все</li>
                 {% for m in menu_category %}
-                  <li data-filter="*" class="filter-active">{{ m.name }}</li>
+                  <li data-filter=".{{ m.name }}" class="filter-active">{{ m.name }}</li>
                 {% endfor %}
             </ul>
           </div>
@@ -185,7 +177,7 @@
 
         <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
             {% for p in products %}
-                <div class="col-lg-6 menu-item">
+                <div class="col-lg-6 menu-item {{ p.category.name }}">
                     <img src="{{ p.photo_product.url }}" class="menu-img" alt="">
                     <div class="menu-content">
                         <a>{{ p.name_product }}</a><span>{{ p.price }}</span>
@@ -290,70 +282,6 @@
 
       </div>
     </section><!-- End Events Section -->
-
-    <!-- ======= Book A Table Section ======= -->
-    <section id="book-a-table" class="book-a-table">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Забронировать</h2>
-                <p>Заказать столик</p>
-            </div>
-
-            <form action="" method="post" role="form"  data-aos="fade-up" data-aos-delay="100">{% csrf_token %}
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 form-group">
-                        {{ forms.name }}
-                        <div class="validate"></div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
-                        {{ forms.email }}
-                        <div class="validate"></div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
-                        {{ forms.phone_number }}
-                        <div class="validate"></div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 form-group mt-3">
-                        {{ forms.date }}
-                        <div class="validate"></div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 form-group mt-3">
-                        {{ forms.time }}
-                        <div class="validate"></div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 form-group mt-3">
-                        {{ forms.people_number }}
-                        <div class="validate"></div>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <div class="loading">Минуту</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Мы свяжемся с вами в ближайшее время для подтверждения бронирования. Спасибо за выбор нашего ресторана!</div>
-                </div>
-                <div class="text-center"><button type="submit" data-toggle="modal" data-target="#myModal">Забронировать</button></div>
-            </form>
-        </div>
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="myModalLabel">Поздравляем!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Ваша бронь успешно принята.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Book A Table Section -->
 
 
     <!-- ======= Gallery Section ======= -->
@@ -484,7 +412,23 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="{% static '' %}assets/js/main.js"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+  <script>
+      $(document).ready(function() {
+          var $grid = $('.menu-container').isotope({
+              itemSelector: '.menu-item',
+              layoutMode: 'fitRows'
+          });
+          $('#menu-flters li').on('click', function() {
+              var filterValue = $(this).attr('data-filter');
+              $grid.isotope({ filter: filterValue });
+              $('#menu-flters li').removeClass('filter-active');
+              $(this).addClass('filter-active');
+          });
+      });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
 
 </body>
 
