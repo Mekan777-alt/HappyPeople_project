@@ -17,7 +17,7 @@ class MenuCategory(models.Model):
 
 
 class Products(models.Model):
-    name_product = models.CharField(max_length=64, verbose_name='Название продукта')
+    name_product = models.CharField(max_length=64, verbose_name='Название блюда')
     description_product = models.TextField(verbose_name='Описание продукта')
     photo_product = models.ImageField(upload_to='product', null=True, blank=True, verbose_name='Фотография продукта')
     price = models.DecimalField(max_digits=8, decimal_places=2, default=0, verbose_name='Цена продукта')
