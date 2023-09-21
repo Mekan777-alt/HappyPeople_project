@@ -17,3 +17,14 @@ def index(request):
             form.save()
     else:
         return render(request, 'mainapp/index.html', context)
+
+
+def booking(request):
+    if request.method == "POST":
+        form = UsersForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'mainapp/index.html')
+    else:
+        form = UsersForm()
+        return render(request, 'mainapp/reserved.html', {"form": form})
