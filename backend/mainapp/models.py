@@ -47,7 +47,6 @@ class Sales(models.Model):
 
 class Users(models.Model):
     name = models.CharField(max_length=64, verbose_name='Имя')
-    email = models.CharField(max_length=20, verbose_name='Почта')
     phone_number = models.CharField(max_length=15, verbose_name='Телефон номер')
     people_number = models.PositiveIntegerField(verbose_name='Количество человек')
     date = models.CharField(max_length=15, verbose_name='Дата брони')
