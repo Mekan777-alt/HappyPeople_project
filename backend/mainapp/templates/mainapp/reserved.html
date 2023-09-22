@@ -3,11 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Бронирование</title>
     <!-- Подключите Bootstrap CSS и JavaScript -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
     <style>
         /* Основной фон и текст */
@@ -44,7 +46,7 @@
 </head>
 <body>
 
-<div class="container mt-5">
+<div class="container mt-5 form-title">
     <h2>Форма бронирования</h2>
     <form id="bookingForm" method="post">
         {% csrf_token %}
@@ -95,6 +97,22 @@ $(document).ready(function() {
     });
 });
 </script>
+
+<script>
+    $(document).ready(function() {
+    $('.datepicker').datepicker({
+        dateFormat: 'yy-mm-dd',
+        minDate: 0,
+    });
+});
+</script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+{#<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>#}
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.js"></script>
+
 
 
 

@@ -49,8 +49,9 @@ class Users(models.Model):
     name = models.CharField(max_length=64, verbose_name='Имя')
     phone_number = models.CharField(max_length=15, verbose_name='Телефон номер')
     people_number = models.PositiveIntegerField(verbose_name='Количество человек')
-    date = models.CharField(max_length=15, verbose_name='Дата брони')
+    date = models.TextField(verbose_name='Дата брони')
     time = models.CharField(max_length=5, verbose_name='Время брони')
+    comment = models.TextField(default=None, verbose_name='Комментарий пользователя', null=True)
     time_register = models.DateTimeField(default=django.utils.timezone.now, verbose_name='Когда пришла бронь')
 
     class Meta:
