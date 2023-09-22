@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-from secret import SECRET_KEY
+from secret import SECRET_KEY, TELEGRAM_BOT_TOKEN, CHAT_ID
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,6 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = SECRET_KEY
+TELEGRAM_BOT_TOKEN = TELEGRAM_BOT_TOKEN
+CHAT_ID = CHAT_ID
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

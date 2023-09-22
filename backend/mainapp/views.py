@@ -12,12 +12,7 @@ def index(request):
         'menu_category': MenuCategory.objects.all(),
         'forms': UsersForm()
     }
-    if request.method == 'POST':
-        form = UsersForm(request.POST)
-        if form.is_valid():
-            form.save()
-    else:
-        return render(request, 'mainapp/index.html', context)
+    return render(request, 'mainapp/index.html', context)
 
 
 def booking(request):
@@ -25,6 +20,7 @@ def booking(request):
         form = UsersForm(request.POST)
         if form.is_valid():
             form.save()
+            #send_message()
             return JsonResponse({"success": True})
         else:
             errors = form.errors
