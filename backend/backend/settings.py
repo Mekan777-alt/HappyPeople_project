@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-from secret import SECRET_KEY, TELEGRAM_BOT_TOKEN, CHAT_ID
+# from secret import SECRET_KEY, TELEGRAM_BOT_TOKEN, CHAT_ID
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRET_KEY
-TELEGRAM_BOT_TOKEN = TELEGRAM_BOT_TOKEN
-CHAT_ID = CHAT_ID
+SECRET_KEY = ''
+# TELEGRAM_BOT_TOKEN = TELEGRAM_BOT_TOKEN
+# CHAT_ID = CHAT_ID
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -121,7 +121,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+# STATIC_ROOT = 'static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
