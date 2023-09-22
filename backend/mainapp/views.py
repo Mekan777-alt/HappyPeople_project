@@ -1,4 +1,5 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
+from django.http import JsonResponse
 from .models import Products, MenuCategory, Sales
 from .forms import UsersForm
 
@@ -24,7 +25,10 @@ def booking(request):
         form = UsersForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'mainapp/index.html')
+            return JsonResponse({"success": True})
+        else:
+            errors = form.errors
+            return JsonResponse({"success": False, "errors": errors})
     else:
         form = UsersForm()
         return render(request, 'mainapp/reserved.html', {"form": form})

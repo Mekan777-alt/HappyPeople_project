@@ -1,24 +1,24 @@
+<!-- booking.html -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бронирование</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Подключите Bootstrap CSS и JavaScript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <style>
         /* Основной фон и текст */
         body {
-            background-color: black; /* Темный фон */
-            color: #f8f9fa; /* Белый текст */
+            background-color: black;
+            color: #f8f9fa;
         }
 
         /* Стиль заголовка формы */
         .form-title {
-            color: #d3af71; /* Оранжевый цвет */
+            color: #d3af71;
         }
 
         /* Стиль кнопки "Забронировать" */
@@ -30,67 +30,73 @@
 
         /* Стиль модального окна */
         .modal-content {
-            background-color: #343a40; /* Темный фон для модального окна */
-            color: #f8f9fa; /* Белый текст в модальном окне */
+            background-color: black;
+            color: white;
         }
 
         /* Стиль кнопки "Закрыть" в модальном окне */
         .btn-close {
-            background-color: #d3af71; /* Оранжевый фон */
-            border-color: #d3af71; /* Оранжевая рамка */
-            color: #fff; /* Белый текст */
+            background-color: #d3af71;
+            border-color: #d3af71;
+            color: #fff;
         }
     </style>
 </head>
 <body>
 
 <div class="container mt-5">
-    <h2 class="form-title">Форма бронирования</h2>
+    <h2>Форма бронирования</h2>
     <form id="bookingForm" method="post">
         {% csrf_token %}
-        <!-- Здесь добавьте поля формы бронирования -->
         {{ form.as_p }}
         <button type="submit" class="btn btn-book">Забронировать</button>
     </form>
 </div>
 
 <!-- Модальное окно с поздравлением -->
-<div class="modal fade" id="congratulationsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<div class="modal" id="congratulationsModal">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Поздравляем!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <h4 class="modal-title">Поздравляем!</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                Ваше бронирование успешно отправлено. Спасибо!
+                <p>Ваше бронирование успешно отправлено. Спасибо!</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-close" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-close" id="closeModalButton">Закрыть</button>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    $(document).ready(function() {
-        $('#bookingForm').submit(function(event) {
-            event.preventDefault(); // Предотвратить отправку формы
-            // Выполнить AJAX-запрос для отправки данных формы на сервер
-            $.ajax({
-                type: 'POST',
-                url: '{% url "main_app:booking" %}', // Укажите URL для обработки данных на сервере
-                data: $(this).serialize(),
-                success: function(data) {
-                    // Показать модальное окно с поздравлением после успешной отправки
-                    $('#congratulationsModal').modal('show');
-                }
-            });
+$(document).ready(function() {
+    $('#bookingForm').submit(function(event) {
+        event.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '{% url "mainapp:booking" %}',
+            data: $(this).serialize(),
+            success: function(data) {
+                $('#congratulationsModal').modal('show');
+            }
         });
     });
+});
 </script>
+<script>
+    $(document).ready(function() {
+    var homepageURL = "{% url 'mainapp:index' %}";
+
+    $('#closeModalButton').click(function() {
+        window.location.href = homepageURL;
+    });
+});
+</script>
+
+
 
 </body>
 </html>
